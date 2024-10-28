@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    @RenderSection("Styles", required: false)
+<style>
+    .navbar-brand{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+    }
+
+        .navbar-brand:hover {
+            background-color: forestgreen;
+            color: yellow;           
+        }
+</style>
+</head>
+<body>
+    <a class="navbar-brand" asp-page="/Movies/Index">Movie List</a>
+    <a class="navbar-brand" asp-page="/WeatherForeCastPage">Weather ForeCast</a>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
